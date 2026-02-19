@@ -82,7 +82,7 @@ export const getRecommendations = (req, res) => {
   filtered.sort((a, b) => b.popularity - a.popularity);
   const selected = filtered.slice(0, max);
 
-  const itinerary: any[] = [];
+  const itinerary = [];
   for (let i = 1; i <= days; i++) {
     const dayDest = selected[(i - 1) % selected.length];
     if (!dayDest) break;
